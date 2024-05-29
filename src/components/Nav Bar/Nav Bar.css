@@ -1,0 +1,38 @@
+header {
+    width: 100vw;
+}
+
+.navBar:last-child {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto; /* Three columns */
+    background-color: #333; /* Navbar background color */
+    color: black; /* Text color */
+    justify-content: space-around;
+}
+
+.navBar-1{
+    grid-column:span 2;
+}
+
+
+.navBar-2 {
+    grid-column:span 1;
+}
+
+.navBar-2 {
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Add gap between items */
+}
+
+.navBar-3 {
+    display: grid!important;
+    background-color: #333; /* Match background color */
+    grid-column: span 3; /* Span all columns except the last one */
+    justify-content: center !important; /* Center items horizontally */
+    width: 100%;
+}
+
+.navBar-3 > *{
+    text-align: center;
+}
