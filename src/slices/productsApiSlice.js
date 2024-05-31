@@ -1,4 +1,24 @@
-import { getTopProducts } from "../../../backEnd/controllers/productController.js";
+import("https://www.ryanmitchellofficial.com/api/product")
+  .then(module => {
+    // Now you can use the module's exports
+    const { getTopProducts } = module;
+    
+    // Call the function
+    getTopProducts()
+      .then(products => {
+        // Handle the response
+        console.log(products);
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error("Error fetching top products:", error);
+      });
+  })
+  .catch(error => {
+    // Handle any errors related to importing the module
+    console.error("Error importing module:", error);
+  });
+  
 import { PRODUCTS_URL, UPLOADS_URL } from "../constants";
 import { apiSlice } from "./apiSlice.js";
 
